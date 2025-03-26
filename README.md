@@ -41,7 +41,8 @@ df.head()
 # Check shape
 print(f"Dataset contains {df.shape[0]} rows and {df.shape[1]} columns")
 ```
-1
+![Screenshot 2025-03-24 162352](https://github.com/user-attachments/assets/abb9bdbf-7e6d-4d6e-8f50-94041b537896)
+
 ```
 # Set PassengerId as index
 df.set_index("PassengerId", inplace=True)
@@ -49,7 +50,8 @@ df.set_index("PassengerId", inplace=True)
 # Summary statistics
 df.describe()
 ```
-2
+![Screenshot 2025-03-24 162356](https://github.com/user-attachments/assets/c46f9118-92b9-4369-9c9e-29b2ed2bc028)
+
 
 ```
 # Count unique values in categorical columns
@@ -57,19 +59,22 @@ categorical_columns = ["Survived", "Pclass", "Sex", "Embarked"]
 for col in categorical_columns:
     print(f"{col} unique values:\n", df[col].value_counts(), "\n")
 ```
-3
+![Screenshot 2025-03-24 162401](https://github.com/user-attachments/assets/e655fb42-f7d4-4694-b78d-4d0b8c5074de)
+
 
 ```
 sns.countplot(data=df, x="Survived")
 plt.title("Survival Count")
 plt.show()
 ```
-4
+![Screenshot 2025-03-24 162404](https://github.com/user-attachments/assets/d4351711-9356-4077-94cd-0e566293b1da)
+
 
 ```
 df["Pclass"].unique()
 ```
-5
+![Screenshot 2025-03-24 162411](https://github.com/user-attachments/assets/2fde3a32-da69-4579-9cfa-56e2e858033d)
+
 
 ```
 df.rename(columns={"Sex": "Gender"}, inplace=True)
@@ -79,20 +84,23 @@ sns.catplot(x='Survived', hue='Gender', data=df, kind='count')
 plt.title("Survival by Gender")
 plt.show()
 ```
-6
+![Screenshot 2025-03-24 162418](https://github.com/user-attachments/assets/bb38b658-b9ef-456b-92db-107f6831a420)
+
 
 ```
 sns.boxplot(x="Survived", y="Age", data=df)
 plt.title("Age Distribution by Survival")
 plt.show()
 ```
-7
+![Screenshot 2025-03-24 162423](https://github.com/user-attachments/assets/b8cbf635-3113-408a-a7a1-c8c7084bc9d0)
+
 ```
 sns.boxplot(x="Pclass", y="Age", hue="Gender", data=df)
 plt.title("Age Distribution Across Passenger Classes and Gender")
 plt.show()
 ```
-8
+![Screenshot 2025-03-24 162428](https://github.com/user-attachments/assets/0288b04a-b650-48cf-84eb-c6d826b7e987)
+
 
 ```
 
@@ -100,7 +108,8 @@ sns.catplot(x="Pclass", y="Survived", hue="Gender", data=df, kind="bar")
 plt.title("Survival Rate by Passenger Class and Gender")
 plt.show()
 ```
-9
+![Screenshot 2025-03-24 162432](https://github.com/user-attachments/assets/b7a55d48-333d-48bb-9a2d-227401886569)
+
 
 ```
 
@@ -115,7 +124,8 @@ plt.title("Feature Correlation Heatmap")
 plt.show()
 
 ```
-10
+![Screenshot 2025-03-24 162448](https://github.com/user-attachments/assets/3b55d0b6-2125-4da4-8f49-ac1901c94c2d)
+
 
 ```
 
