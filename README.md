@@ -137,4 +137,4 @@ plt.show()
 
 
 # RESULT
-       
+ Thus, the Exploratory Data Analysis on the given data set was performed successfully.      
